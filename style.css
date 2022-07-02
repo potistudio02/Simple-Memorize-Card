@@ -8,8 +8,8 @@
 }
 
 body {
-	background-color: #eee;
-	color: #222;
+	background-color: #eeeeee;
+	color: #444444;
 	user-select: none;
 }
 
@@ -54,4 +54,5 @@ body {
 
 .Answer-Text {
 	font-size: 8vw;
+	color: #ff4444;
 }
