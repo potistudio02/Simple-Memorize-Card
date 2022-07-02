@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Zen Maru Gothic', sans-serif;
+	font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+	background-color: #eee;
+	color: #222;
+	user-select: none;
+}
+
+.Title-Container {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	width: 100vw;
+	height: 50px;
+}
+
+.Title-Text {
+	position: absolute;
+	font-family: 'Zen Maru Gothic', sans-serif;
+	font-size: 25px;
+}
+
+.Question-Card {
+	position: absolute;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.Question-Text {
+	font-size: 10vw;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+	.Question-Text {
+		font-size: 50px;
+	}
+}
+
+.Answer-Text {
+	font-size: 8vw;
+}
