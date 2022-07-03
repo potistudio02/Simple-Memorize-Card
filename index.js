@@ -19,11 +19,7 @@ class Task {
 
 	getQuestionByIndex (index) {
 		this.currentIndex = index;
-
-		if (this.currentIndex != index)
-			return questions[index];
-		else
-			return questions[randomInt(0, this.questions.length - 1)];
+		return questions[index];
 	}
 }
 
