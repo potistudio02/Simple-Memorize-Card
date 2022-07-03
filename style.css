@@ -8,19 +8,24 @@
 }
 
 body {
-	background-color: #eeeeee;
-	color: #444444;
+	background-color: #fff;
+	color: #222;
 	user-select: none;
 }
 
+body::-webkit-scrollbar {
+	display: none;
+}
+
 .Title-Container {
-	position: absolute;
+	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	top: 0;
 	width: 100vw;
 	height: 50px;
+	z-index: 1;
 }
 
 .Title-Text {
@@ -49,4 +54,37 @@ body {
 .Answer-Text {
 	font-size: 8vw;
 	color: #ff4444;
+}
+
+.Home-Button {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	margin: 10px;
+}
+
+.Task-Card {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 20px 10px;
+	width: calc(100vw - 20px);
+	height: 100px;
+	border-radius: 5px;
+	box-shadow: 0 0px 10px #ddd;
+	cursor: pointer;
+}
+
+.Task-Title {
+	position: absolute;
+	left: 10px;
+	font-size: 30px;
+}
+
+.Task-Description {
+	position: absolute;
+	left: 200px;
+	font-size: 20px;
+	opacity: 0.5;
 }

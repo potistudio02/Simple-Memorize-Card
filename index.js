@@ -11,13 +11,19 @@ let currentTask;
 
 class Task {
 	questions;
+	currentIndex = 0;
 
 	constructor (questions) {
 		this.questions = questions;
 	}
 
 	getQuestionByIndex (index) {
-		return questions[index];
+		this.currentIndex = index;
+
+		if (this.currentIndex != index)
+			return questions[index];
+		else
+			return questions[randomInt(0, this.questions.length - 1)];
 	}
 }
 
@@ -82,6 +88,7 @@ function goTask() {
 	document.getElementById ("home").style.visibility = "hidden";
 	document.getElementById ("main").style.visibility = "visible";
 	questionIndex = 0;
+	questionText.innerText = "問題";
 }
 
 function createCard (name, title, description, path) {
