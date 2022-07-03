@@ -8,16 +8,37 @@
 		<title>元素記号の暗記</title>
 	</head>
 	<body>
-		<div class="Title-Container">
-			<span, class="Title-Text">化学基礎 : 元素記号</span>
+		<div id="main", class="Training", style="visibility:hidden">
+			<div class="Title-Container">
+				<span class="Title-Text">化学基礎 : 元素記号</span>
+
+				<div id="homeButton", class="Home-Button">
+					<svg viewBox="0 0 100 100">
+						<use xlink:href="./assets/icon/home.svg#home"></use>
+					</svg>
+				</div>
+			</div>
+
+
+			<div id="questionCard", class="Question-Card">
+				<span id="questionText", class="Question-Text">問題</span>
+				<span id="answerText", class="Answer-Text">解答</span>
+			</div>
 		</div>
 
-		<div id="questionCard", class="Question-Card">
-			<span id="questionText", class="Question-Text">問題</span>
-			<span id="answerText", class="Answer-Text">解答</span>
+		<div id="home", style="visibility:visible">
+			<div class="Title-Container">
+				<span class="Title-Text">カードリスト</span>
+			</div>
+
+			<div class="Task-Card">
+				<span class="Task-Title">化学基礎</span>
+				<span class="Task-Description">教科書</span>
+			</div>
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+		<script src="./task-list.js"></script>
 		<script src="./questions.js"></script>
 		<script src="./index.js"></script>
 	</body>
