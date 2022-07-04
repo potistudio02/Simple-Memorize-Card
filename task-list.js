@@ -3,13 +3,7 @@ var taskList = [
 		name: "Science",
 		title: "化学基礎",
 		description: "教科書",
-		path: "./questions.js"
-	},
-	{
-		name: "English-Words",
-		title: "英単語",
-		description: "Unit 1 ~",
-		path: "./English-Words-Unit1.js"
+		path: "./tasks/Science-11B.js"
 	},
 	{
 		name: "History",
@@ -22,5 +16,11 @@ var taskList = [
 		title: "保健体育",
 		description: "学習プリント : No.1 ~ No.7",
 		path: "./tasks/PE-11B.js"
-	}
+	},
+	{
+		name: "English-Words",
+		title: "英単語",
+		description: "p68 ~ p111",
+		path: "./tasks/English-Words-B11.js"
+	},
 ]
