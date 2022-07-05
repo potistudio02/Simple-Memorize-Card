@@ -3,8 +3,6 @@ const questionText = document.getElementById ("questionText");
 const answerText = document.getElementById ("answerText");
 const homeButton = document.getElementById ("homeButton");
 
-const questionsLength = questions.length;
-
 let questionIndex = 0;
 let isTranslatable = true;
 let currentTask;
@@ -59,7 +57,7 @@ function showAnswer() {
 		targets: answerText,
 		translateY: [-50, 0],
 		opacity: [0, 1],
-		duration: 500,
+		duration: 1000,
 		easing: "easeOutExpo"
 	});
 
@@ -75,16 +73,27 @@ homeButton.addEventListener ("click", () => {
 });
 
 function goHome() {
-	document.getElementById ("home").style.visibility = "visible";
-	document.getElementById ("main").style.visibility = "hidden";
+	anime ({
+		targets: [document.getElementById ("home"), document.getElementById ("main")],
+		translateX: [-window.innerWidth, 0],
+		duration: 500,
+		easing: "easeInOutExpo"
+	});
+
 	hideAnswer();
 }
 
 function goTask() {
-	document.getElementById ("home").style.visibility = "hidden";
-	document.getElementById ("main").style.visibility = "visible";
+	anime ({
+		targets: [document.getElementById ("home"), document.getElementById ("main")],
+		translateX: [0, -window.innerWidth],
+		duration: 1000,
+		easing: "easeOutExpo"
+	});
+
 	questionIndex = 0;
 	questionText.innerText = "問題";
+	isTranslatable = true;
 }
 
 function createCard (name, title, description, path) {
