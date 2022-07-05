@@ -8,7 +8,7 @@
 		<title>元素記号の暗記</title>
 	</head>
 	<body>
-		<div id="main", class="Training", style="visibility:hidden">
+		<div id="main", class="Training">
 			<div class="Title-Container">
 				<span class="Title-Text">化学基礎 : 元素記号</span>
 
@@ -21,12 +21,16 @@
 
 
 			<div id="questionCard", class="Question-Card">
-				<span id="questionText", class="Question-Text">問題</span>
-				<span id="answerText", class="Answer-Text">解答</span>
+				<div id="questionTextContainer", class="Question-Text-Container">
+					<span id="questionText", class="Question-Text">問題</span>
+				</div>
+				<div id="answerTextContainer", class="Answer-Text-Container">
+					<span id="answerText", class="Answer-Text">解答</span>
+				</div>
 			</div>
 		</div>
 
-		<div id="home", style="visibility:visible">
+		<div id="home">
 			<div class="Title-Container">
 				<span class="Title-Text">カードリスト</span>
 			</div>
@@ -34,7 +38,6 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 		<script src="./task-list.js"></script>
-		<script src="./questions.js"></script>
 		<script src="./index.js"></script>
 	</body>
 </html>

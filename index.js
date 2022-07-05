@@ -40,7 +40,7 @@ function nextCard() {
 	questionText.innerText = currentTask.getQuestionByIndex(questionIndex).q;
 
 	anime ({
-		targets: questionText,
+		targets: document.getElementById ("questionTextContainer"),
 		translateX: [-50, 0],
 		duration: 1000,
 		easing: "easeOutExpo",
@@ -54,7 +54,7 @@ function showAnswer() {
 	answerText.style.visibility = "visible";
 
 	anime ({
-		targets: answerText,
+		targets: document.getElementById ("questionTextContainer"),
 		translateY: [-50, 0],
 		opacity: [0, 1],
 		duration: 1000,
@@ -87,8 +87,8 @@ function goTask() {
 	anime ({
 		targets: [document.getElementById ("home"), document.getElementById ("main")],
 		translateX: [0, -window.innerWidth],
-		duration: 1000,
-		easing: "easeOutExpo"
+		duration: 500,
+		easing: "easeInOutExpo"
 	});
 
 	questionIndex = 0;
