@@ -40,7 +40,7 @@ function nextCard() {
 	questionText.innerText = currentTask.getQuestionByIndex(questionIndex).q;
 
 	anime ({
-		targets: document.getElementById ("questionTextContainer"),
+		targets: document.getElementById ("questionText"),
 		translateX: [-50, 0],
 		duration: 1000,
 		easing: "easeOutExpo",
@@ -54,7 +54,7 @@ function showAnswer() {
 	answerText.style.visibility = "visible";
 
 	anime ({
-		targets: document.getElementById ("questionTextContainer"),
+		targets: document.getElementById ("answerText"),
 		translateY: [-50, 0],
 		opacity: [0, 1],
 		duration: 1000,
@@ -80,7 +80,7 @@ function goHome() {
 		easing: "easeInOutExpo"
 	});
 
-	hideAnswer();
+
 }
 
 function goTask() {
@@ -90,6 +90,7 @@ function goTask() {
 		duration: 500,
 		easing: "easeInOutExpo"
 	});
+	hideAnswer();
 
 	questionIndex = 0;
 	questionText.innerText = "問題";

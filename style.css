@@ -48,12 +48,6 @@ body::-webkit-scrollbar {
 	height: 100vh;
 }
 
-.Question-Text-Container {
-	margin: 0 20px;
-	width: calc(100vw - 40px);
-	overflow-wrap: break-word;
-}
-
 .Question-Text {
 	font-size: 8vw;
 	font-weight: bold;

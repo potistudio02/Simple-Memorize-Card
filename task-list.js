@@ -23,4 +23,10 @@ var taskList = [
 		description: "p68 ~ p111",
 		path: "./tasks/English-Words-B11.js"
 	},
+	{
+		name: "Japanese",
+		title: "古語",
+		description: "p62 ~ p126",
+		path: "./tasks/Japanese.js"
+	}
 ]
